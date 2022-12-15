@@ -10,20 +10,97 @@
 <div id="body">
     <div id="header">
         <ul id="mainMenu">
-            <li class="mainOptions" id="logo"><a href="index.html" class="mainAnchor" id="logoa"><img src="_imgs/QuizZer1.png" id="imgLogo"/></a></li>
+            <li class="mainOptions" id="logo"><a href="index.html" class="mainAnchor" id="logoa" style="border-bottom: 3px #fff solid;"><img src="_imgs/QuizZer1.png" id="imgLogo" class="active"/></a></li>
             <!--<li class="mainOptions" id="logo"><a href="#" class="mainAnchor" id="logoa">QuizZer</a></li>-->
-            <li class="mainOptions"><a href="#" class="mainAnchor" id="active">Home</a></li>
+            <li class="mainOptions"><a href="index.html" class="mainAnchor">Home</a></li>
             <li class="mainOptions"><a href="#" class="mainAnchor">About</a></li>
             <li class="mainOptions"><a href="#" class="mainAnchor">Contact</a></li>
+            <script>
+                inputName();
+            </script>
+            <li class="mainOptions"><a href="#" class="mainAnchor"><script>document.write(username)</script></a></li>
         </ul>
     </div>
     <div id="wrapper">
-        <h4 id="tagline">Are You Genius?</h4>
-        <form id="startQuiz" action="quiz.html" method="post">
-            <input type="text" required placeholder="Enter Your Full Name" id="unameInput" name="username"/>
-            <br>
-            <input type="submit" value="Start Quiz" id="startQuizButton"/>
-        </form>
+        <script>
+            scoring();
+        </script>
+        <h2 id="score">Score Board</h2>
+            <table id="table">
+                <tr class="tableRowh">
+                    <th class="tableHead">Questions: </th>
+                    <th class="tableHead">Your Answer: </th>
+                    <th class="tableHead">Correct Answer: </th>
+                    <th class="tableHead">Correct or Not </th>
+                </tr>
+                <tr class="tableRow">
+                    <td class="tableData"><script>document.write(questions[0])</script></td>
+                    <td class="tableData"><script>document.write(anss[0])</script></td>
+                    <td class="tableData"><script>document.write(ans[0])</script></td>
+                    <td class="tableData"><script>document.write(correctAns[0])</script></td>
+                </tr>
+                <tr class="tableRow1">
+                    <td class="tableData"><script>document.write(questions[1])</script></td>
+                    <td class="tableData"><script>document.write(anss[1])</script></td>
+                    <td class="tableData"><script>document.write(ans[1])</script></td>
+                    <td class="tableData"><script>document.write(correctAns[1])</script></td>
+                </tr>
+                <tr class="tableRow">
+                    <td class="tableData"><script>document.write(questions[2])</script></td>
+                    <td class="tableData"><script>document.write(anss[2])</script></td>
+                    <td class="tableData"><script>document.write(ans[2])</script></td>
+                    <td class="tableData"><script>document.write(correctAns[2])</script></td>
+                </tr>
+                <tr class="tableRow1">
+                    <td class="tableData"><script>document.write(questions[3])</script></td>
+                    <td class="tableData"><script>document.write(anss[3])</script></td>
+                    <td class="tableData"><script>document.write(ans[3])</script></td>
+                    <td class="tableData"><script>document.write(correctAns[3])</script></td>
+                </tr>
+                <tr class="tableRow">
+                    <td class="tableData"><script>document.write(questions[4])</script></td>
+                    <td class="tableData"><script>document.write(anss[4])</script></td>
+                    <td class="tableData"><script>document.write(ans[4])</script></td>
+                    <td class="tableData"><script>document.write(correctAns[4])</script></td>
+                </tr>
+                <tr class="tableRow1">
+                    <td class="tableData"><script>document.write(questions[5])</script></td>
+                    <td class="tableData"><script>document.write(anss[5])</script></td>
+                    <td class="tableData"><script>document.write(ans[5])</script></td>
+                    <td class="tableData"><script>document.write(correctAns[5])</script></td>
+                </tr>
+                <tr class="tableRow">
+                    <td class="tableData"><script>document.write(questions[6])</script></td>
+                    <td class="tableData"><script>document.write(anss[6])</script></td>
+                    <td class="tableData"><script>document.write(ans[6])</script></td>
+                    <td class="tableData"><script>document.write(correctAns[6])</script></td>
+                </tr>
+                <!--<tr class="tableRow1">-->
+                    <!--<td class="tableData"><script>document.write(questions[7])</script></td>-->
+                    <!--<td class="tableData"><script>document.write(anss[7])</script></td>-->
+                    <!--<td class="tableData"><script>document.write(ans[7])</script></td>-->
+                    <!--<td class="tableData"><script>document.write(correctAns[7])</script></td>-->
+                <!--</tr>-->
+                <!--<tr class="tableRow">-->
+                    <!--<td class="tableData"><script>document.write(questions[8])</script></td>-->
+                    <!--<td class="tableData"><script>document.write(anss[8])</script></td>-->
+                    <!--<td class="tableData"><script>document.write(ans[8])</script></td>-->
+                    <!--<td class="tableData"><script>document.write(correctAns[8])</script></td>-->
+                <!--</tr>-->
+                <!--<tr class="tableRow1">-->
+                    <!--<td class="tableData"><script>document.write(questions[9])</script></td>-->
+                    <!--<td class="tableData"><script>document.write(anss[9])</script></td>-->
+                    <!--<td class="tableData"><script>document.write(ans[9])</script></td>-->
+                    <!--<td class="tableData"><script>document.write(correctAns[9])</script></td>-->
+                <!--</tr>-->
+                <tr class="tableRowh" id="tablecenter">
+                    <th></th>
+                    <th class="tableHead">Score:</th>
+                    <th class="tableHead"><script>document.write(score.toFixed(2) + "%")</script></th>
+                    <th></th>
+                </tr>
+            </table>
+
     </div>
     <footer id="footer">
         <div id="column1">
@@ -31,9 +108,9 @@
         </div>
         <div id="column2">
             <p>
-            <a href="http://www.facebook.com/HazizFerozKhan" id="ff" target="_blank">F</a>
-            <a href="http://www.twitter.com/BeingHazizKhan" id="tf" target="_blank">T</a>
-            <a href="http://plus.google.com/+HazizKhanHFK"  id="gf" target="_blank">G</a>
+                <a href="http://www.facebook.com/HazizFerozKhan" id="ff" target="_blank">F</a>
+                <a href="http://www.twitter.com/BeingHazizKhan" id="tf" target="_blank">T</a>
+                <a href="http://plus.google.com/+HazizKhanHFK"  id="gf" target="_blank">G</a>
             </p>
         </div>
         <div id="column3">
